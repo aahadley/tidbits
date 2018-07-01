@@ -94,9 +94,9 @@ def ack(m, n):
 # Get input and check for errors.
 def main(argv):
     
-    #ncomment the following line ONLY if
-    sys.setrecursionlimit(70000)
-    print(sys.getrecursionlimit())
+    #uncomment the following line with caution.
+    #sys.setrecursionlimit(70000)
+    #print(sys.getrecursionlimit())
 
     try:
         m = int(sys.argv[1])
@@ -113,8 +113,6 @@ def main(argv):
     result = ack(m, n)
     print(result)
 
-if len(sys.argv) != 3:
-    print("Please enter two nonnegative integers.")
 
-elif __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv) == 3:
     main(sys.argv[1:])
